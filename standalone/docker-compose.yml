@@ -1,0 +1,13 @@
+version: '3'
+services:
+  gdacc:
+    build: gdacc
+    image: gdacc
+    container_name: gdacc
+    # command: --networkid 1865 --nodiscover --datadir=/root/.dacc --mine --minerthreads=1 --rpc --rpcaddr=0.0.0.0 --rpcport=8545 --rpccorsdomain='*' --rpcapi=admin,db,debug,eth,miner,net,personal,shh,txpool,web3 --ws --wsaddr=0.0.0.0 --wsport=8546 --wsorigins='*' --wsapi=admin,db,debug,eth,miner,net,personal,shh,txpool,web3
+    command: --networkid 1865 --nodiscover --datadir=/root/.dacc --ipcpath=/root/.dacc --rpc --rpcaddr=0.0.0.0 --rpcport=8545 --rpccorsdomain='*' --rpcapi=admin,db,debug,eth,miner,net,personal,shh,txpool,web3 --ws --wsaddr=0.0.0.0 --wsport=8546 --wsorigins='*' --wsapi=admin,db,debug,eth,miner,net,personal,shh,txpool,web3
+    ports:
+      - 8545:8545
+      - 8556:8546
+      - 30303:30303
+      - 30303:30303/udp
