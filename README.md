@@ -7,5 +7,5 @@ tools for building DACC private network by Docker
 ``` sh
 $ cd standalone
 $ docker-compose up -d --build
-docker exec -it gdacc /gdacc attach ipc://root/.dacc/gdacc.ipc
+$ docker exec -it gdacc /gdacc attach ipc://root/.dacc/gdacc.ipc
 ```
