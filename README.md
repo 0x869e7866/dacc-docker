@@ -1,4 +1,4 @@
-# dacc-docker
+# DACC-docker
 
 tools for building DACC private network by Docker
 
